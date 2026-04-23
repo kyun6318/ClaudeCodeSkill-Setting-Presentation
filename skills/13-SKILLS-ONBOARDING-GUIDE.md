@@ -109,7 +109,7 @@ Step 3: 심층 기획 (30분, 선택적)
   → 확인: 각 문서 훑어보기
 
 Step 4: 기획 리뷰 (선택적)
-  /council-codex
+  /codex-review
   → 입력: docs/planning/ 기획 문서
   → 출력: council-report.md
 ```
@@ -207,7 +207,7 @@ Step 4: 기획 리뷰 (선택적)
 | **code-reviewer** | 검증 | 의미론적 코드 리뷰 |
 | **powerqa** | 검증 | 테스트 자동 수정 |
 | **kongkong2** | 최적화 | 정확도 향상 (자동 적용) |
-| **council-codex** | 리뷰 | 다관점 기획 검증 |
+| **codex-review** | 리뷰 | 다관점 기획 검증 |
 | **self-improvement-loop** | 자가개선 | 자율 코드 개선 |
 
 ---

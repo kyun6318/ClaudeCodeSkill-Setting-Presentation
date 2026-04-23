@@ -63,7 +63,7 @@ Claude Code는 스킬 없이도 다음을 수행할 수 있다:
 | idea-concretizer | "재귀적으로 사고해서 3-4개 MVP 제안해" |
 | co-brainstorming | "4 AI 페르소나로 비판 없이 브레인스토밍해" |
 | the-fool | "5가지 모드(반증, 레드팀 등)로 기획을 공격해" |
-| council-codex | "council + Codex MCP 정적 리뷰 루프 돌려" |
+| codex-review | "council + Codex MCP 정적 리뷰 루프 돌려" |
 | task-decomposer | "Domain-Guarded 구조로 TASKS.md 생성해" |
 | code-reviewer | "2단계로 리뷰해: 스펙 준수 → 코드 품질" |
 | quality-gate | "커버리지/복잡도/lint/타입 에러 메트릭 측정해" |

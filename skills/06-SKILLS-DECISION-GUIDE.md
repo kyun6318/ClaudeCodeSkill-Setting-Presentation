@@ -91,7 +91,7 @@ docs/planning/ 이 있다
  │
  ├─ 기획 품질을 검증하고 싶다
  │   │
- │   ├─ 정적 분석 리뷰 → /council-codex
+ │   ├─ 정적 분석 리뷰 → /codex-review
  │   │   "리뷰→수정→재리뷰 루프 (최대 3라운드)"
  │   │
  │   └─ 파괴적 비평/반증 → /the-fool
@@ -106,7 +106,7 @@ docs/planning/ 이 있다
 
 | 상황 | 스킬 | 입력 | 출력 |
 |------|------|------|------|
-| 기획 리뷰 (정적 분석) | /council-codex | docs/planning/* | 리뷰 리포트 |
+| 기획 리뷰 (정적 분석) | /codex-review | docs/planning/* | 리뷰 리포트 |
 | 기획 공격 (파괴적) | /the-fool | 기획 문서 | 실패 시나리오 |
 | 태스크 분해 | /task-decomposer | docs/planning/* | 06-tasks.md |
 
@@ -335,7 +335,7 @@ TASKS.md가 있다
 | "같이 브레인스토밍하자" | `/co-brainstorming` |
 | "제대로 기획하자" | `/requirements-dialogue` |
 | "빨리 기획해줘" | `/auto-planner` |
-| "이 기획 검토해줘" | `/council-codex` |
+| "이 기획 검토해줘" | `/codex-review` |
 | "이 기획 왜 실패할까?" | `/the-fool` |
 | "태스크 분해해줘" | `/task-decomposer` |
 | "TASKS.md 실행해줘" | `/dependency-auto-executor` |
@@ -381,6 +381,6 @@ TASKS.md가 있다
 
 | 조합 | 효과 |
 |------|------|
-| /idea-concretizer → /requirements-dialogue → /council-codex | 발산 → 수렴 → 정적 검증 |
+| /idea-concretizer → /requirements-dialogue → /codex-review | 발산 → 수렴 → 정적 검증 |
 | /dependency-auto-executor + /token-compressor | 실행 효율 + 토큰 절감 |
 | /powerqa → /systematic-debugger | 자동 수정 실패 시 근본 원인 분석 |

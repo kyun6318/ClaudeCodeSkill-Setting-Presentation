@@ -19,8 +19,8 @@ trigger: "/codex-review, 계획 리뷰, static review, 정적 리뷰"
 | **파이프라인 위치** | forge-pipeline Phase 2 (구현 계획 리뷰) |
 | **기반 스킬** | 멀티 에이전트 리뷰 계승 |
 | **추가 기능** | Codex MCP 정적 리뷰 루프, 계획 문서 특화 리뷰 |
-| **입력** | `docs/planning/06-tasks.md`, `docs/planning/00-drift-anchor.md`, `specs/` |
-| **출력** | `docs/planning/codex-review-report.md`, 수정된 `06-tasks.md` |
+| **입력** | `docs/planning/tasks.md`, `docs/planning/drift-anchor.md`, `specs/` |
+| **출력** | `docs/planning/codex-review-report.md`, 수정된 `tasks.md` |
 
 ---
 
@@ -56,18 +56,18 @@ fi
 
 ```
 필수:
-- docs/planning/06-tasks.md (구현 계획)
-- docs/planning/00-drift-anchor.md (Drift Anchor)
+- docs/planning/tasks.md (구현 계획)
+- docs/planning/drift-anchor.md (Drift Anchor)
 
 선택:
 - specs/domain/resources.yaml
 - specs/screens/*.yaml
-- docs/planning/01-prd.md ~ 09-personas.md
+- docs/planning/prd.md ~ docs/planning/personas.md
 ```
 
 없으면 AskUserQuestion으로 안내:
 ```
-"구현 계획(06-tasks.md)이 없습니다. 먼저 /tasks-generator를 실행해주세요."
+"구현 계획(tasks.md)이 없습니다. 먼저 /tasks-generator를 실행해주세요."
 ```
 
 ---
@@ -83,7 +83,7 @@ fi
 │                    Static Review Loop                        │
 │                                                             │
 │  Iteration 1:                                               │
-│  ├── 06-tasks.md 로드                                       │
+│  ├── tasks.md 로드                                       │
 │  ├── Reviewer 3명에게 리뷰 요청                             │
 │  │   ├── Architect: 구조/의존성/병렬성 검증                 │
 │  │   ├── Reviewer: 완전성/일관성/실행가능성 검증            │
@@ -96,7 +96,7 @@ fi
 │  └── Critical/Important 이슈 있으면 → 수정 → Iteration 2   │
 │                                                             │
 │  Iteration 2: (Critical 이슈 수정 후)                       │
-│  ├── 수정된 06-tasks.md 재로드                              │
+│  ├── 수정된 tasks.md 재로드                              │
 │  ├── 이전 이슈 해결 여부 확인                               │
 │  ├── 새로운 이슈 탐색                                       │
 │  └── 이슈 없으면 → Human Checkpoint                        │
@@ -189,7 +189,7 @@ DriftGuard에게:
 - 합의된 수정사항: {N}개
 - 미해결 쟁점: {M}개
 
-수정사항을 06-tasks.md에 반영하겠습니다."
+수정사항을 tasks.md에 반영하겠습니다."
 ```
 
 ---
@@ -198,7 +198,7 @@ DriftGuard에게:
 
 ### Step 1: 자동 수정 (합의 사항)
 
-합의된 수정사항을 06-tasks.md에 반영:
+합의된 수정사항을 tasks.md에 반영:
 - 태스크 추가/삭제/수정
 - 의존성 관계 재구성
 - 병렬 그룹 재정의

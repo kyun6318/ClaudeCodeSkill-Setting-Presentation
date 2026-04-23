@@ -46,13 +46,13 @@
 - requirements-dialogue는 대화형(40-50개 질문) → 시간이 오래 걸린다
 - 빠른 프로토타이핑이 필요할 때 → `/auto-planner` (5분, 비대화형)
 - 아이디어 자체가 불명확할 때 → `/idea-concretizer` 또는 `/co-brainstorming`이 먼저 필요
-- 기획 문서 간 일관성 검증 → `/council-codex`가 정적 리뷰
+- 기획 문서 간 일관성 검증 → `/codex-review`가 정적 리뷰
 
 **탄생 순서** (추정):
 1. `/requirements-dialogue` — 최초의 기획 스킬
 2. `/task-decomposer` — requirements-dialogue 출력을 실행 가능한 형태로 변환
 3. `/idea-concretizer`, `/co-brainstorming` — requirements-dialogue 이전 단계 필요성 발견
-4. `/council-codex` — 기획 품질 검증 필요성 발견
+4. `/codex-review` — 기획 품질 검증 필요성 발견
 5. `/auto-planner` — 빠른 대안 필요성 발견
 6. `/requirements-dialogue-anchored` — 기획 도중 범위 이탈(drift) 문제 해결
 

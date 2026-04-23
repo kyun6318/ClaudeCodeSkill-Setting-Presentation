@@ -24,7 +24,7 @@ graph TD
 
     %% Phase 2.5
     subgraph P25["Phase 2.5: REVIEW (선택적)"]
-        P25_2["/council-codex (+ Codex MCP)"]
+        P25_2["/codex-review (+ Codex MCP)"]
         P25_Out>"출력: docs/planning/council-report.md"]
     end
 
@@ -78,13 +78,13 @@ graph TD
 ### `/full-pipeline-orchestrator-pipeline` — Drift-Anchored 강화 파이프라인
 
 ```
-requirements-dialogue-anchored → task-decomposer + council-codex → Execution Topology → dependency-auto-executor → quality-gate + sync + code-reviewer
+requirements-dialogue-anchored → task-decomposer + codex-review → Execution Topology → dependency-auto-executor → quality-gate + sync + code-reviewer
 ```
 
 | Phase | 스킬 | 특징 |
 |-------|------|------|
 | 1 | /requirements-dialogue-anchored | Drift Anchor 생성 (objective/scope/constraint) |
-| 2 | /task-decomposer + /council-codex | Static Review Loop (최대 3라운드) |
+| 2 | /task-decomposer + /codex-review | Static Review Loop (최대 3라운드) |
 | 3 | Execution Topology 정의 | 병렬 실행 전략 수립 |
 | 3.5 | Gemini MCP 디자인 + 테스트 시나리오 | 디자인/로직 분리 |
 | 4 | /dependency-auto-executor | 실행 + branch 격리 |
@@ -147,7 +147,7 @@ graph LR
     FPOP["full-pipeline-orchestrator-pipeline"]
     FPOP --> RDA["requirements-dialogue-anchored"]
     FPOP --> TD2["task-decomposer"]
-    FPOP --> CC["council-codex"]
+    FPOP --> CC["codex-review"]
     FPOP --> DAE["dependency-auto-executor"]
     FPOP --> QG["quality-gate"]
     FPOP --> SY["sync"]
@@ -180,7 +180,7 @@ graph LR
     IC["idea-concretizer"] --".claude/docs/...-proposal.md"--> RD["requirements-dialogue"]
     CB["co-brainstorming"] --"co-brainstorming-proposal.md"--> RD
     
-    RD --"docs/planning/01-09"--> CC["council-codex"]
+    RD --"docs/planning/01-09"--> CC["codex-review"]
     RD --".claude/handoffs/*.json<br/>(세션 분리)"--> TD["task-decomposer"]
     
     CC --"council-report.md (반영)"--> TD
@@ -276,7 +276,7 @@ graph TD
 
 ### 기획만 깊이 있게
 ```
-/co-brainstorming → /requirements-dialogue → /council-codex
+/co-brainstorming → /requirements-dialogue → /codex-review
 ```
 
 ### 기획 완료 후 빠른 빌드

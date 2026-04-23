@@ -42,7 +42,7 @@
 | **task-decomposer** | - | Domain-Guarded 태스크 구조 |
 | **full-pipeline-orchestrator-pipeline** | - | 5단계 모델 최적화 파이프라인 |
 | **dependency-auto-executor** | - | 의존성 기반 실행 엔진 |
-| **council-codex** | v2 | Codex MCP 정적 리뷰 루프 |
+| **codex-review** | v2 | Codex MCP 정적 리뷰 루프 |
 | **auto-planner** | - | 비대화형 5분 spec 생성 |
 | **idea-concretizer** | - | AI 재귀적 MVP 제안 |
 | **co-brainstorming** | - | 4 페르소나 브레인스토밍 |
@@ -105,7 +105,7 @@
 | 버전 | 스킬 | 의미 |
 |------|------|------|
 | **v3.0** | self-improvement-loop | 3세대 진화, 8개 서브커맨드, Guard + Chain 패턴 |
-| **v2.x** | requirements-dialogue, requirements-dialogue-anchored, council-codex | 2세대, 안정화된 핵심 기획 스킬 |
+| **v2.x** | requirements-dialogue, requirements-dialogue-anchored, codex-review | 2세대, 안정화된 핵심 기획 스킬 |
 | **v1.0** | self-improvement-loop-skills | 1세대, 초기 릴리스 |
 | **미표기** | 나머지 37개 | 버전 추적 없음 |
 

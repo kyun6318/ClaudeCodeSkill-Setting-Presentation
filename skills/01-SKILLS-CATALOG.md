@@ -109,7 +109,7 @@
 
 ### 리뷰/검증/품질 계열
 
-#### `council-codex`
+#### `codex-review`
 - Codex MCP 플러거블 정적 리뷰
 - 여러 관점(CTO, UX, Security 등)에서 기획안을 심의
 - 다각도 피드백으로 기획 품질 향상
